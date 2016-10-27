@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E2773CF1CF5516000896F89 /* PlanPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2773CE1CF5516000896F89 /* PlanPago.swift */; };
+		1E2C1C471D07725B007C27B5 /* micalculadoraprestamo80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C1C441D07725B007C27B5 /* micalculadoraprestamo80px.png */; };
+		1E2C1C481D07725B007C27B5 /* micalculadoraprestamo180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C1C451D07725B007C27B5 /* micalculadoraprestamo180px.png */; };
+		1E2C1C491D07725B007C27B5 /* micalculadoraprestamo120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C1C461D07725B007C27B5 /* micalculadoraprestamo120px.png */; };
+		1E85FB061CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E85FB041CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld */; };
+		1E9CCA2D1CF4A4D9003ADD86 /* VCMasterCuotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CCA2C1CF4A4D9003ADD86 /* VCMasterCuotas.swift */; };
+		1EA29A481D119DFB00FCDC49 /* VCWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA29A471D119DFB00FCDC49 /* VCWebView.swift */; };
+		1EA29A4E1D11B94500FCDC49 /* docmicalculadora.html in Resources */ = {isa = PBXBuildFile; fileRef = 1EA29A4D1D11B94500FCDC49 /* docmicalculadora.html */; };
+		1EB970631D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB9705F1D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png */; };
+		1EB970641D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB970601D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png */; };
+		1EB970651D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB970611D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png */; };
+		1EB970661D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB970621D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png */; };
+		1EC313F01CF607A100AB76CB /* fresh-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EC313EF1CF607A100AB76CB /* fresh-background.jpg */; };
+		1EC421031CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC421011CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift */; };
+		1EC421041CFBF60A00915281 /* CPlanPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC421021CFBF60A00915281 /* CPlanPago.swift */; };
+		1EC421061CFBF88400915281 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC421051CFBF88400915281 /* DataController.swift */; };
+		1EFE24D91CF2811D003D2E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE24D81CF2811D003D2E01 /* AppDelegate.swift */; };
+		1EFE24DB1CF2811D003D2E01 /* VCMiPrestamoMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE24DA1CF2811D003D2E01 /* VCMiPrestamoMain.swift */; };
+		1EFE24DE1CF2811D003D2E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE24DC1CF2811D003D2E01 /* Main.storyboard */; };
+		1EFE24E01CF2811D003D2E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE24DF1CF2811D003D2E01 /* Assets.xcassets */; };
+		1EFE24E31CF2811D003D2E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE24E11CF2811D003D2E01 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E2773CE1CF5516000896F89 /* PlanPago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanPago.swift; sourceTree = "<group>"; };
+		1E2C1C441D07725B007C27B5 /* micalculadoraprestamo80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micalculadoraprestamo80px.png; sourceTree = "<group>"; };
+		1E2C1C451D07725B007C27B5 /* micalculadoraprestamo180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micalculadoraprestamo180px.png; sourceTree = "<group>"; };
+		1E2C1C461D07725B007C27B5 /* micalculadoraprestamo120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micalculadoraprestamo120px.png; sourceTree = "<group>"; };
+		1E85FB051CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiCalculadoraPrestamo.xcdatamodel; sourceTree = "<group>"; };
+		1E9CCA2C1CF4A4D9003ADD86 /* VCMasterCuotas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMasterCuotas.swift; sourceTree = "<group>"; };
+		1EA29A471D119DFB00FCDC49 /* VCWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWebView.swift; sourceTree = "<group>"; };
+		1EA29A4D1D11B94500FCDC49 /* docmicalculadora.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = docmicalculadora.html; sourceTree = "<group>"; };
+		1EB9705F1D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox58.png"; sourceTree = "<group>"; };
+		1EB970601D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox80.png"; sourceTree = "<group>"; };
+		1EB970611D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox120.png"; sourceTree = "<group>"; };
+		1EB970621D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox180.png"; sourceTree = "<group>"; };
+		1EC313EF1CF607A100AB76CB /* fresh-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fresh-background.jpg"; sourceTree = "<group>"; };
+		1EC421011CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CPlanPago+CoreDataProperties.swift"; path = "MiPrestamo/CPlanPago+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1EC421021CFBF60A00915281 /* CPlanPago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CPlanPago.swift; path = MiPrestamo/CPlanPago.swift; sourceTree = "<group>"; };
+		1EC421051CFBF88400915281 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = MiPrestamo/DataController.swift; sourceTree = "<group>"; };
+		1EFE24D51CF2811D003D2E01 /* Mi Calculadora de Prestamo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mi Calculadora de Prestamo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFE24D81CF2811D003D2E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EFE24DA1CF2811D003D2E01 /* VCMiPrestamoMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMiPrestamoMain.swift; sourceTree = "<group>"; };
+		1EFE24DD1CF2811D003D2E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EFE24DF1CF2811D003D2E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1EFE24E21CF2811D003D2E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EFE24E41CF2811D003D2E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EFE24D21CF2811D003D2E01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E32A0A91D9C509900281464 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				1EA29A4D1D11B94500FCDC49 /* docmicalculadora.html */,
+			);
+			name = Docs;
+			sourceTree = "<group>";
+		};
+		1EB970671D6FA8A600ED9B50 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1EB9705F1D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png */,
+				1EB970601D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png */,
+				1EB970611D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png */,
+				1EB970621D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png */,
+				1E2C1C441D07725B007C27B5 /* micalculadoraprestamo80px.png */,
+				1E2C1C451D07725B007C27B5 /* micalculadoraprestamo180px.png */,
+				1E2C1C461D07725B007C27B5 /* micalculadoraprestamo120px.png */,
+				1EC313EF1CF607A100AB76CB /* fresh-background.jpg */,
+			);
+			name = Images;
+			path = MiPrestamo;
+			sourceTree = "<group>";
+		};
+		1EB970681D6FA8C400ED9B50 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				1EC421011CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift */,
+				1EC421021CFBF60A00915281 /* CPlanPago.swift */,
+				1EC421051CFBF88400915281 /* DataController.swift */,
+				1E85FB041CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		1EFE24CC1CF2811D003D2E01 = {
+			isa = PBXGroup;
+			children = (
+				1E32A0A91D9C509900281464 /* Docs */,
+				1EB970671D6FA8A600ED9B50 /* Images */,
+				1EB970681D6FA8C400ED9B50 /* Core Data */,
+				1EFE24D71CF2811D003D2E01 /* MiCalculadoraPrestamo */,
+				1EFE24D61CF2811D003D2E01 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EFE24D61CF2811D003D2E01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EFE24D51CF2811D003D2E01 /* Mi Calculadora de Prestamo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EFE24D71CF2811D003D2E01 /* MiCalculadoraPrestamo */ = {
+			isa = PBXGroup;
+			children = (
+				1EFE24D81CF2811D003D2E01 /* AppDelegate.swift */,
+				1EFE24DA1CF2811D003D2E01 /* VCMiPrestamoMain.swift */,
+				1E2773CE1CF5516000896F89 /* PlanPago.swift */,
+				1E9CCA2C1CF4A4D9003ADD86 /* VCMasterCuotas.swift */,
+				1EA29A471D119DFB00FCDC49 /* VCWebView.swift */,
+				1EFE24DC1CF2811D003D2E01 /* Main.storyboard */,
+				1EFE24DF1CF2811D003D2E01 /* Assets.xcassets */,
+				1EFE24E11CF2811D003D2E01 /* LaunchScreen.storyboard */,
+				1EFE24E41CF2811D003D2E01 /* Info.plist */,
+			);
+			name = MiCalculadoraPrestamo;
+			path = MiPrestamo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EFE24D41CF2811D003D2E01 /* Mi Calculadora de Prestamo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EFE24E71CF2811D003D2E01 /* Build configuration list for PBXNativeTarget "Mi Calculadora de Prestamo" */;
+			buildPhases = (
+				1EFE24D11CF2811D003D2E01 /* Sources */,
+				1EFE24D21CF2811D003D2E01 /* Frameworks */,
+				1EFE24D31CF2811D003D2E01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mi Calculadora de Prestamo";
+			productName = MiPrestamo;
+			productReference = 1EFE24D51CF2811D003D2E01 /* Mi Calculadora de Prestamo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EFE24CD1CF2811D003D2E01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Américo Cantillo Gutiérrez";
+				TargetAttributes = {
+					1EFE24D41CF2811D003D2E01 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DVSM299CEH;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1EFE24D01CF2811D003D2E01 /* Build configuration list for PBXProject "Mi Calculadora de Prestamo" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EFE24CC1CF2811D003D2E01;
+			productRefGroup = 1EFE24D61CF2811D003D2E01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EFE24D41CF2811D003D2E01 /* Mi Calculadora de Prestamo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EFE24D31CF2811D003D2E01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2C1C491D07725B007C27B5 /* micalculadoraprestamo120px.png in Resources */,
+				1EC313F01CF607A100AB76CB /* fresh-background.jpg in Resources */,
+				1E2C1C471D07725B007C27B5 /* micalculadoraprestamo80px.png in Resources */,
+				1EB970641D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png in Resources */,
+				1EFE24E31CF2811D003D2E01 /* LaunchScreen.storyboard in Resources */,
+				1EB970631D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png in Resources */,
+				1EFE24E01CF2811D003D2E01 /* Assets.xcassets in Resources */,
+				1EB970661D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png in Resources */,
+				1EB970651D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png in Resources */,
+				1E2C1C481D07725B007C27B5 /* micalculadoraprestamo180px.png in Resources */,
+				1EFE24DE1CF2811D003D2E01 /* Main.storyboard in Resources */,
+				1EA29A4E1D11B94500FCDC49 /* docmicalculadora.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EFE24D11CF2811D003D2E01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E85FB061CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld in Sources */,
+				1EC421031CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift in Sources */,
+				1EA29A481D119DFB00FCDC49 /* VCWebView.swift in Sources */,
+				1E9CCA2D1CF4A4D9003ADD86 /* VCMasterCuotas.swift in Sources */,
+				1EFE24DB1CF2811D003D2E01 /* VCMiPrestamoMain.swift in Sources */,
+				1EC421041CFBF60A00915281 /* CPlanPago.swift in Sources */,
+				1EC421061CFBF88400915281 /* DataController.swift in Sources */,
+				1EFE24D91CF2811D003D2E01 /* AppDelegate.swift in Sources */,
+				1E2773CF1CF5516000896F89 /* PlanPago.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1EFE24DC1CF2811D003D2E01 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EFE24DD1CF2811D003D2E01 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1EFE24E11CF2811D003D2E01 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EFE24E21CF2811D003D2E01 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EFE24E51CF2811D003D2E01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1EFE24E61CF2811D003D2E01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EFE24E81CF2811D003D2E01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MiPrestamo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetainmemsoft.MiCalculadoraPrestamo;
+				PRODUCT_NAME = "Mi Calculadora de Prestamo";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1EFE24E91CF2811D003D2E01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MiPrestamo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetainmemsoft.MiCalculadoraPrestamo;
+				PRODUCT_NAME = "Mi Calculadora de Prestamo";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EFE24D01CF2811D003D2E01 /* Build configuration list for PBXProject "Mi Calculadora de Prestamo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFE24E51CF2811D003D2E01 /* Debug */,
+				1EFE24E61CF2811D003D2E01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EFE24E71CF2811D003D2E01 /* Build configuration list for PBXNativeTarget "Mi Calculadora de Prestamo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFE24E81CF2811D003D2E01 /* Debug */,
+				1EFE24E91CF2811D003D2E01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E85FB041CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E85FB051CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodel */,
+			);
+			currentVersion = 1E85FB051CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodel */;
+			name = MiCalculadoraPrestamo.xcdatamodeld;
+			path = MiPrestamo/MiCalculadoraPrestamo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1EFE24CD1CF2811D003D2E01 /* Project object */;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="CPlanPago" representedClassName=".CPlanPago" syncable="YES">
+        <attribute name="arrCapital" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="arrCuotas" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="arrInteres" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="arrPagado" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="arrSaldo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="douPrestamo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="douTasa" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="douTiempo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="douTotalPagado" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CPlanPago" positionX="-63" positionY="-18" width="128" height="180"/>
+    </elements>
+</model>
