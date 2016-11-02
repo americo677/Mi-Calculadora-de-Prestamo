@@ -25,6 +25,12 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lblTotalAPagar: UILabel!
     
+    @IBOutlet weak var btnCuotas: UIBarButtonItem!
+    
+    @IBOutlet weak var vDivisor: UIView!
+    
+    @IBOutlet weak var lblOutput: UILabel!
+    
     var boolInvalido: Bool = false
     
     var cppPlan: PlanPago?
@@ -42,6 +48,17 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
     var boolDatoObligatorio: [Bool] = [false, false, false]
     
     func loadPreferences() {
+        
+        txtMonto.placeholder  = "Monto del préstamo"
+        txtTasa.placeholder   = "Porcentaje Tasa pactada"
+        txtTiempo.placeholder = "Número de meses"
+        txtTasaEA.placeholder = "Porcentaje Tasa Efectiva Anual"
+        
+        self.txtMonto.keyboardType = .decimalPad
+        self.txtTasa.keyboardType = .decimalPad
+        self.txtTasaEA.keyboardType = .decimalPad
+        self.txtTiempo.keyboardType = .decimalPad
+        
         if preferencias.double(forKey: "initMonto") != 0 {
             txtMonto.text = formatter.string(from: (preferencias.double(forKey: "initMonto") as NSNumber))
             //txtMonto.text = formatter.string(from: NSNumber(preferencias.double(forKey: "initMonto")))
@@ -63,6 +80,55 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         if preferencias.double(forKey: "initDeudaTotal") != 0 {
             lblTotalAPagar.text = formatter.string(from: (preferencias.double(forKey: "initDeudaTotal") as NSNumber))
         }
+        
+        // Cambia el color de la navigation bar
+        self.navigationController?.navigationBar.barTintColor = UIColor.customLightGreen()
+        
+        // Cambia el color del texto de la navigation bar
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.customLightYellow(),  NSFontAttributeName: UIFont(name: "Futura", size: 16)!]
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.customLightYellow()
+        
+        let leftButton = UIBarButtonItem(title: "Info", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.btnInfoOnTouchInsideUp(_:)))
+        
+        
+        let rightButton = UIBarButtonItem(title: "Cuotas", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.btnCuotasOnTouchInsideUp(_:)))
+        
+        let backButton = UIBarButtonItem(title: "Regresar", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+
+        
+        // Bar title text color
+        //let shadow = NSShadow()
+        //shadow.shadowColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //shadow.shadowOffset = CGSize(0, 1)
+        
+        let color = UIColor.customLightYellow()
+        
+        let titleFont : UIFont = UIFont(name: "Futura", size: 14)!
+        
+        let attributes = [
+            NSForegroundColorAttributeName : color,
+            //NSShadowAttributeName : shadow,
+            NSFontAttributeName : titleFont
+        ]
+
+        
+        leftButton.setTitleTextAttributes(attributes, for: UIControlState.normal)
+        
+        rightButton.setTitleTextAttributes(attributes, for: UIControlState.normal)
+        
+        backButton.setTitleTextAttributes(attributes, for: UIControlState.normal)
+        
+        //backButton.titleTextAttributes(for: [NSFontAttributeName: UIFont(name: "Futura", size: 15)!])
+        
+        
+        
+        self.navigationItem.leftBarButtonItem = leftButton
+        
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        self.navigationItem.backBarButtonItem = backButton
+        
     }
     
     override func viewDidLoad() {
@@ -73,11 +139,6 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         cppPlan = PlanPago()
         
         loadPreferences()
-        
-        txtMonto.placeholder  = "Monto del préstamo"
-        txtTasa.placeholder   = "% Tasa pactada"
-        txtTiempo.placeholder = "Número de meses"
-        txtTasaEA.placeholder = "% Tasa Efectiva Anual"
         
         txtMonto.delegate     = self
         txtTiempo.delegate    = self
@@ -97,10 +158,26 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         
         self.view.addGestureRecognizer(tap)
         
-        fetchPlan()
+        //fetchPlan()
         
     }
     
+    @IBAction func btnCuotasOnTouchInsideUp(_ sender: UIBarButtonItem) {
+       self.performSegue(withIdentifier: "segueMasterCuotas", sender: sender)
+    }
+    
+
+    @IBAction func btnInfoOnTouchInsideUp(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "segueInfo", sender: sender)
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchPlan()
+    }
+    
+
     @IBAction func txtMontoOnEditingDidEnd(_ sender: UITextField) {
         var monto: Double?
         
@@ -186,6 +263,12 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
     
     func fetchPlan() {
         
+        //btnCuotas.isEnabled = true
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        lblTotalAPagar.isHidden = false
+        //vDivisor.isHidden = false
+        lblOutput.isHidden = false
+
         if cppPlan?.douPrestamo == 0 {
             // Swift 2.3
             //let planf = NSFetchRequest(entityName: "CPlanPago")
@@ -217,9 +300,21 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
                     boolDatoObligatorio[1] = true
                     lblTotalAPagar.text = String(format:"%@", formatter.string(from: (cppPlan!.douTotalPagado as NSNumber))!)
                     
+                    //btnCuotas.isEnabled = true
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                    lblTotalAPagar.isHidden = false
+                    //vDivisor.isHidden = false
+                    lblOutput.isHidden = false
                     //preferencias.setDouble(cppPlan!.douTotalPagado, forKey: "initDeudaTotal")
                 } else {
                     print("En la principal no hay plan previamente almacenado.")
+                    
+                    //btnCuotas.isEnabled = false
+                    self.navigationItem.rightBarButtonItem?.isEnabled = false
+                    lblTotalAPagar.isHidden = true
+                    //vDivisor.isHidden = true
+                    lblOutput.isHidden = true
+                    
                 }
             } catch {
                 fatalError("No se pudo recuperar los datos almacenados: \(error)")
@@ -441,15 +536,13 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "segueMasterCuotas", sender: cppPlan)
     }
     
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
         if segue.identifier == "segueMasterCuotas" {
             let vcMasterCuotas: VCMasterCuotas = segue.destination as! VCMasterCuotas
             
             vcMasterCuotas.cppPlan = cppPlan!
         }
-        
     }
     
     
@@ -467,7 +560,6 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
