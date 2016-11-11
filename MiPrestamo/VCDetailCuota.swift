@@ -15,7 +15,6 @@ class VCDetailCuota: UIViewController, UITableViewDelegate, UITableViewDataSourc
     let formatterInt : NumberFormatter = NumberFormatter()
     
     @IBOutlet weak var tvDetail: UITableView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,7 @@ class VCDetailCuota: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.navigationController?.isNavigationBarHidden = false
         
         initFormatters()
-        
-        
-        
+
         self.tvDetail.dataSource = self
         self.tvDetail.delegate = self
         
@@ -84,8 +81,6 @@ class VCDetailCuota: UIViewController, UITableViewDelegate, UITableViewDataSourc
             cellView.removeFromSuperview()
         }
         
-        //let labelTitle     : UILabel = UILabel(frame: CGRectMake(0.0, 0.0, 377.0, 35.0))
-        //let labelTitle     : UILabel = UILabel(frame: CGRectMake(0.0, 0.0, 339.0, 35.0))
         let labelTitle     : UILabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 35.0))
         
         //339.00
@@ -123,7 +118,6 @@ class VCDetailCuota: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.addConstraint(labelTitleWidthConstraint)
         cell.addConstraint(labelTitleTopConstraint)
         
-        
         labelValue.font = UIFont(name: fontNameNumeric, size: 13)
         labelValue.textColor = UIColor.gray
         labelValue.tag = cindexPath.row
@@ -151,29 +145,12 @@ class VCDetailCuota: UIViewController, UITableViewDelegate, UITableViewDataSourc
         //    print("\(err.localizedDescription)")
         //}
 
-        
-   //     let trailingConstraint = NSLayoutConstraint(item: labelValue, attribute:NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: cell.contentView, attribute: NSLayoutAttribute.rightMargin, multiplier: 1, constant: 20)
-        
-        //let verticalConstraint = NSLayoutConstraint(item: labelValue, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
-        //let widthConstraint = NSLayoutConstraint(item: labelValue, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 100)
-        //let heightConstraint = NSLayoutConstraint(item: labelValue, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 100)
-        
-        //view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
-        
         cell.contentView.addConstraint(labelValueTrailingConstraint)
         cell.contentView.addConstraint(labelValueVerticalConstraint)
 
-        
-        
-        
-        
-        
-        
-        
         //cell.accessoryType = caccessoryType
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
