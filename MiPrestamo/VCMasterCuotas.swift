@@ -15,12 +15,72 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
     
     var cppPlan   : PlanPago?
     let formatter : NumberFormatter = NumberFormatter()
-    //let moc       : NSManagedObjectContext = NSManagedObjectContext()  
+    let formatterDec : NumberFormatter = NumberFormatter()
+    let formatterInt : NumberFormatter = NumberFormatter()
+    //let moc       : NSManagedObjectContext = NSManagedObjectContext()
     let moc = DataController().managedObjectContext
     let strAppTitle = "Mi Calculadora de Préstamo"
     var dCuota = [String: Double]()
     
     @IBOutlet var tvCuotas: UITableView!
+    
+    
+    func writeCoreDataObjectToCVS(objects: [PlanPago], named: String) -> String {
+        
+        guard objects.count > 0 else {
+            return ""
+        }
+        
+        
+        
+        var strLine: String = ""
+        
+        let header = "Préstamo;Tasa E.A.;Tasa;Plazo;Cuota;Valor de la cuota;Total pagado antes de la cuota;Abono a capital;Abono a intéres;Saldo pendiente después de la cuota;Total pagado después de la cuota\n"
+        
+        //Préstamo
+        //Tasa Efectiva Anual
+        //Tasa Nominal Mensual
+        //Plazo en meses
+        //dCuota["Cuota"] = Double(pathIndex.row + 1)
+        //dCuota["Valor de la cuota"] = douCuota.doubleValue
+        //dCuota["Total pagado antes de la cuota"] = douPaid.doubleValue
+        //dCuota["Abono a capital"] = douCapital.doubleValue
+        //dCuota["Abono a interés"] = douInteres.doubleValue
+        //dCuota["Saldo pendiente después de la cuota"] = douSaldo.doubleValue
+        //dCuota["Total pagado después de la cuota"] =  douPagado.doubleValue
+        
+        strLine += header
+        
+        for plan in objects {
+            let cuotas: [Double] = (plan.arrCuotas)
+            
+            for index in 0..<cuotas.count {
+                strLine += formatter.string(from: NSNumber.init(value: (plan.douPrestamo)))! + ";"
+                strLine += formatterDec.string(from: NSNumber.init(value: (plan.douTasa)))! + ";"
+                strLine += formatterDec.string(from: NSNumber.init(value: (plan.douTasa)))! + ";"
+                strLine += formatterInt.string(from: NSNumber.init(value: (plan.douTiempo)))! + ";"
+                
+                strLine += formatterInt.string(from: NSNumber.init(value: (index+1)))! + ";"
+                
+                
+                strLine += formatter.string(from: NSNumber.init(value: (cuotas[index])))! + ";"
+                
+                strLine += formatter.string(from: NSNumber.init(value: ((plan.arrPagado[index])-cuotas[index])))! + ";"
+                
+                strLine += formatter.string(from: NSNumber.init(value: (plan.arrCapital[index])))! + ";"
+                
+                strLine += formatter.string(from: NSNumber.init(value: (plan.arrInteres[index])))! + ";"
+                
+                strLine += formatter.string(from: NSNumber.init(value: (plan.arrSaldo[index])))! + ";"
+                
+                strLine += formatter.string(from: NSNumber.init(value: (plan.arrPagado[index])))! + ";\n"
+            }
+        }
+        
+        
+        return strLine
+        
+    }
 
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
@@ -28,24 +88,21 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
             
             mail.mailComposeDelegate = self
             mail.setToRecipients([])
-            mail.setMessageBody("<p>Here is your Budget</p>", isHTML: true)
+            mail.setMessageBody("<p>En este mensaje encontrarás el archivo CSV con los datos proyectados.</p>", isHTML: true)
             
+            let now = Date()
             
-            #if LITE_VERSION
-                mail.setSubject(strAppTitle + " Lite demo sending")
-            #endif
+            mail.setSubject("Proyección Cuotas de Crédito Cuota Fija \(now)")
             
-            #if FULL_VERSION
-                mail.setSubject(strAppTitle + ": " + (self.presupuesto?.descripcion)!)
-            #endif
+            //let csvString = "String for testing"
             
-            let csvString = "String for testing"
-                
-                //self.writeCoreDataObjectToCVS(self.presupuesto?.secciones?.allObjects as! [NSManagedObject] ,named: "no_name")
+            let objectsToExport: [PlanPago] = [self.cppPlan!]
+            
+            let csvString = self.writeCoreDataObjectToCVS(objects: objectsToExport, named: "noName")
             
             let data = csvString.data(using: String.Encoding.utf8)
             
-            let strExportFileName = "TheFileName"
+            let strExportFileName = "proyectaCuotas"
                 
                 //self.presupuesto?.descripcion?.stringByReplacingOccurrencesOfString(" ", withString: "_")
             
@@ -58,6 +115,10 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
         }
     }
 
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
     func btnActionOnTouchInsideUp(sender: AnyObject) {
         
         let alertController = UIAlertController(title: self.strAppTitle, message: "Enviar el plan de pagos", preferredStyle: .alert)
@@ -66,12 +127,13 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
             print(action)
         }
 
-        let oneAction = UIAlertAction(title: "Enviar E-mail", style: .default) { (_) in
+        let oneAction = UIAlertAction(title: "Enviar vía E-mail", style: .default) { (_) in
             self.sendEmail()
         }
         
         alertController.addAction(oneAction)
         alertController.addAction(cancelAction)
+        
         self.present(alertController, animated: true) {
         }
         
@@ -86,6 +148,15 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
         //shadow.shadowColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         //shadow.shadowOffset = CGSize(0, 1)
         
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+        
+        formatterDec.numberStyle = .decimal
+        formatterDec.maximumFractionDigits = 2
+        
+        formatterInt.numberStyle = .decimal
+        formatterInt.maximumFractionDigits = 0
+
         let color = UIColor.customLightYellow()
         
         let titleFont : UIFont = UIFont(name: "Futura", size: 14)!
@@ -112,9 +183,6 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
         // Do any additional setup after loading the view.
         
         self.loadPreferences()
-        
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
         
         fetchPlan()
         
@@ -275,9 +343,7 @@ class VCMasterCuotas: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
 
-    
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
