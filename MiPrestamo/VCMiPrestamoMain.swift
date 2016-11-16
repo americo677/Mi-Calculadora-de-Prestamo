@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
 import CoreData
+import StoreKit
 
 class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
     
@@ -31,13 +31,19 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lblOutput: UILabel!
     
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    
+    @IBOutlet weak var btnValorar: UIButton!
+    
     var boolInvalido: Bool = false
     
     var cppPlan: PlanPago?
     
+    var arrPlan: [CPlanPago]? = nil
+    
     let strEntidadPlan: String = "CPlanPago"
     
-    let moc = DataController().managedObjectContext
+    var moc = SingleNSManagedObjectContext.sharedInstance.getMOC() //DataController().managedObjectContext
     
     let douPeriodosxAno: Double = 12
     
@@ -46,6 +52,9 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
     let formatterFlt : NumberFormatter = NumberFormatter()
     
     var boolDatoObligatorio: [Bool] = [false, false, false]
+    
+    
+    // MARK: - Configuración inicial de la vista
     
     func loadPreferences() {
         
@@ -58,6 +67,27 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         self.txtTasa.keyboardType = .decimalPad
         self.txtTasaEA.keyboardType = .decimalPad
         self.txtTiempo.keyboardType = .decimalPad
+        
+        cppPlan = PlanPago()
+        
+        
+        txtMonto.delegate     = self
+        txtTiempo.delegate    = self
+        txtTasaEA.delegate    = self
+        txtTasa.delegate      = self
+        
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+        
+        formatterInt.numberStyle = .none
+        
+        formatterFlt.numberStyle = .decimal
+        formatterFlt.maximumFractionDigits = 2
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(VCMiPrestamoMain.dismissKeyboard))
+        
+        
+        self.view.addGestureRecognizer(tap)
         
         if preferencias.double(forKey: "initMonto") != 0 {
             txtMonto.text = formatter.string(from: (preferencias.double(forKey: "initMonto") as NSNumber))
@@ -89,7 +119,7 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         
         self.navigationController?.navigationBar.tintColor = UIColor.customLightYellow()
         
-        let leftButton = UIBarButtonItem(title: "Info", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.btnInfoOnTouchInsideUp(_:)))
+        //let leftButton = UIBarButtonItem(title: "Info", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.btnInfoOnTouchInsideUp(_:)))
         
         
         let rightButton = UIBarButtonItem(title: "Cuotas", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.btnCuotasOnTouchInsideUp(_:)))
@@ -113,7 +143,7 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         ]
 
         
-        leftButton.setTitleTextAttributes(attributes, for: UIControlState.normal)
+        //leftButton.setTitleTextAttributes(attributes, for: UIControlState.normal)
         
         rightButton.setTitleTextAttributes(attributes, for: UIControlState.normal)
         
@@ -123,7 +153,7 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         
         
         
-        self.navigationItem.leftBarButtonItem = leftButton
+        //self.navigationItem.leftBarButtonItem = leftButton
         
         self.navigationItem.rightBarButtonItem = rightButton
         
@@ -131,37 +161,49 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         
     }
     
+    // MARK: - Delegados para el envío de datos con patrón Delegado
+    func sendDataPlan(_ planPago: [CPlanPago]?) {
+        arrPlan = planPago!
+    }
+    
+    func sendDataManagedObjectContext(_ moc: NSManagedObjectContext?) {
+        self.moc = moc!
+    }
+    
+    // MARK: - Disparadores del ciclo de vida de la vista
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-
-        cppPlan = PlanPago()
         
-        loadPreferences()
+        if self.revealViewController() != nil {
+            btnMenu.target = self.revealViewController()
+            btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
-        txtMonto.delegate     = self
-        txtTiempo.delegate    = self
-        txtTasaEA.delegate    = self
-        txtTasa.delegate      = self
-        
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
-        
-        formatterInt.numberStyle = .none
-        
-        formatterFlt.numberStyle = .decimal
-        formatterFlt.maximumFractionDigits = 2
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(VCMiPrestamoMain.dismissKeyboard))
-        
-        
-        self.view.addGestureRecognizer(tap)
-        
-        //fetchPlan()
+        //print("Ruta de la bd: \(CGlobal().getPath("MiCalculadoraPrestamo.sqlite"))")
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadPreferences()
+        //self.fetchPlan()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.fetchPlan()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        super.viewDidDisappear(animated)
+    }
+    
+    // MARK: - Acciones asociadas a los controles de la vista
+        
     @IBAction func btnCuotasOnTouchInsideUp(_ sender: UIBarButtonItem) {
        self.performSegue(withIdentifier: "segueMasterCuotas", sender: sender)
     }
@@ -171,13 +213,6 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "segueInfo", sender: sender)
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.fetchPlan()
-    }
-    
-
     @IBAction func txtMontoOnEditingDidEnd(_ sender: UITextField) {
         var monto: Double?
         
@@ -274,51 +309,70 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
             //let planf = NSFetchRequest(entityName: "CPlanPago")
             
             // Swift 3.0
-            let planf: NSFetchRequest<NSFetchRequestResult> = CPlanPago.fetchRequest()                
-            do {
-                let plan = try moc.fetch(planf) as! [CPlanPago]
+                //let planf: NSFetchRequest<NSFetchRequestResult> = CPlanPago.fetchRequest()
                 
-                if !plan.isEmpty {
-                    cppPlan?.douPrestamo = plan.first!.douPrestamo!.doubleValue
-                    cppPlan?.douTasa = plan.first!.douTasa!.doubleValue
-                    cppPlan?.douTiempo = plan.first!.douTiempo!.doubleValue
-                    cppPlan?.arrCuotas = plan.first!.arrCuotas! as! [Double]
-                    cppPlan?.arrInteres = plan.first!.arrInteres! as! [Double]
-                    cppPlan?.arrCapital = plan.first!.arrCapital! as! [Double]
-                    cppPlan?.arrSaldo   = plan.first!.arrSaldo! as! [Double]
-                    cppPlan?.arrPagado  = plan.first!.arrPagado! as! [Double]
-                    cppPlan?.douTotalPagado = plan.first!.douTotalPagado!.doubleValue
-                    
-                    txtMonto.text = String(format:"%@", formatter.string(from: (cppPlan!.douPrestamo as NSNumber))!)
-                    boolDatoObligatorio[0] = true
-                    txtTasa.text  = String(format:"%@", formatterFlt.string(from: (cppPlan!.douTasa * 100 as NSNumber))!)
-                    boolDatoObligatorio[2] = true
-                    //txtTasaEA.text = String(format:"%@", formatterFlt.stringFromNumber(cppPlan!.douTasa * 100 * douPeriodosxAno)!)
-                    txtTasaEA.text = String(format:"%@", formatterFlt.string(from: (100 * (pow(cppPlan!.douTasa + 1, 12) - 1) as NSNumber))!)
-                    
-                    txtTiempo.text = String(format:"%@", formatterInt.string(from: (cppPlan!.douTiempo as NSNumber))!)
-                    boolDatoObligatorio[1] = true
-                    lblTotalAPagar.text = String(format:"%@", formatter.string(from: (cppPlan!.douTotalPagado as NSNumber))!)
-                    
-                    //btnCuotas.isEnabled = true
-                    self.navigationItem.rightBarButtonItem?.isEnabled = true
-                    lblTotalAPagar.isHidden = false
-                    //vDivisor.isHidden = false
-                    lblOutput.isHidden = false
-                    //preferencias.setDouble(cppPlan!.douTotalPagado, forKey: "initDeudaTotal")
-                } else {
-                    print("En la principal no hay plan previamente almacenado.")
-                    
-                    //btnCuotas.isEnabled = false
-                    self.navigationItem.rightBarButtonItem?.isEnabled = false
-                    lblTotalAPagar.isHidden = true
-                    //vDivisor.isHidden = true
-                    lblOutput.isHidden = true
-                    
-                }
-            } catch {
-                fatalError("No se pudo recuperar los datos almacenados: \(error)")
-            }
+                let planf: NSFetchRequest<CPlanPago> = CPlanPago.fetchRequest() as! NSFetchRequest<CPlanPago>
+                
+                //print("MOC: \(moc)")
+
+                //if planf != nil {
+                    do {
+                        let plan: [CPlanPago] = try moc.fetch(planf)
+                        
+                        cppPlan = PlanPago()
+
+                        if !plan.isEmpty {
+                            cppPlan?.douPrestamo = plan.first!.douPrestamo!.doubleValue
+                            cppPlan?.douTasa = plan.first!.douTasa!.doubleValue
+                            cppPlan?.douTiempo = plan.first!.douTiempo!.doubleValue
+                            cppPlan?.arrCuotas = plan.first!.arrCuotas! as! [Double]
+                            cppPlan?.arrInteres = plan.first!.arrInteres! as! [Double]
+                            cppPlan?.arrCapital = plan.first!.arrCapital! as! [Double]
+                            cppPlan?.arrSaldo   = plan.first!.arrSaldo! as! [Double]
+                            cppPlan?.arrPagado  = plan.first!.arrPagado! as! [Double]
+                            cppPlan?.douTotalPagado = plan.first!.douTotalPagado!.doubleValue
+                           
+                            txtMonto.text = String(format:"%@", formatter.string(from: (cppPlan!.douPrestamo as NSNumber))!)
+                            boolDatoObligatorio[0] = true
+                            txtTasa.text  = String(format:"%@", formatterFlt.string(from: (cppPlan!.douTasa * 100 as NSNumber))!)
+                            boolDatoObligatorio[2] = true
+                            //txtTasaEA.text = String(format:"%@", formatterFlt.stringFromNumber(cppPlan!.douTasa * 100 * douPeriodosxAno)!)
+                            txtTasaEA.text = String(format:"%@", formatterFlt.string(from: (100 * (pow(cppPlan!.douTasa + 1, 12) - 1) as NSNumber))!)
+                            
+                            txtTiempo.text = String(format:"%@", formatterInt.string(from: (cppPlan!.douTiempo as NSNumber))!)
+                            boolDatoObligatorio[1] = true
+                            lblTotalAPagar.text = String(format:"%@", formatter.string(from: (cppPlan!.douTotalPagado as NSNumber))!)
+                            
+                            //btnCuotas.isEnabled = true
+                            self.navigationItem.rightBarButtonItem?.isEnabled = true
+                            lblTotalAPagar.isHidden = false
+                            //vDivisor.isHidden = false
+                            lblOutput.isHidden = false
+                            //preferencias.setDouble(cppPlan!.douTotalPagado, forKey: "initDeudaTotal")
+                            
+                            // se envía el arreglo de plan al delegado
+                            //delegate?.sendDataPlan!(plan)
+                            
+                        } else {
+                            print("En la principal no hay plan previamente almacenado.")
+                            
+                            //btnCuotas.isEnabled = false
+                            self.navigationItem.rightBarButtonItem?.isEnabled = false
+                            lblTotalAPagar.isHidden = true
+                            //vDivisor.isHidden = true
+                            lblOutput.isHidden = true
+                            
+                        }
+                    } catch {
+                        fatalError("No se pudo recuperar los datos almacenados: \(error)")
+                    }
+                //} else {
+                //    print("Ocurrió un error al intentar hacer fecth en los datos del préstamo.  Se presume que los datos fueron recuperados previamente y se encuentran visualizados en la vista.")
+                //}
+                
+            //}
+
+            
         }
         
     }
@@ -542,6 +596,7 @@ class VCMiPrestamoMain: UIViewController, UITextFieldDelegate {
             let vcMasterCuotas: VCMasterCuotas = segue.destination as! VCMasterCuotas
             
             vcMasterCuotas.cppPlan = cppPlan!
+            vcMasterCuotas.moc = self.moc
         }
     }
     

@@ -9,23 +9,41 @@
 /* Begin PBXBuildFile section */
 		1E14F0C71DC8F18000169C1F /* CGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E14F0C61DC8F18000169C1F /* CGlobal.swift */; };
 		1E2773CF1CF5516000896F89 /* PlanPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2773CE1CF5516000896F89 /* PlanPago.swift */; };
-		1E2C1C471D07725B007C27B5 /* micalculadoraprestamo80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C1C441D07725B007C27B5 /* micalculadoraprestamo80px.png */; };
-		1E2C1C481D07725B007C27B5 /* micalculadoraprestamo180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C1C451D07725B007C27B5 /* micalculadoraprestamo180px.png */; };
-		1E2C1C491D07725B007C27B5 /* micalculadoraprestamo120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C1C461D07725B007C27B5 /* micalculadoraprestamo120px.png */; };
+		1E5922841DDA3AD90094F6E4 /* Home-50.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5922831DDA3AD90094F6E4 /* Home-50.pdf */; };
+		1E5922861DDA614F0094F6E4 /* DataPlanDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5922851DDA614F0094F6E4 /* DataPlanDelegate.swift */; };
 		1E85FB061CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E85FB041CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld */; };
 		1E9CCA2D1CF4A4D9003ADD86 /* VCMasterCuotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CCA2C1CF4A4D9003ADD86 /* VCMasterCuotas.swift */; };
 		1EA29A481D119DFB00FCDC49 /* VCWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA29A471D119DFB00FCDC49 /* VCWebView.swift */; };
 		1EA29A4E1D11B94500FCDC49 /* docmicalculadora.html in Resources */ = {isa = PBXBuildFile; fileRef = 1EA29A4D1D11B94500FCDC49 /* docmicalculadora.html */; };
-		1EB970631D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB9705F1D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png */; };
-		1EB970641D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB970601D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png */; };
-		1EB970651D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB970611D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png */; };
-		1EB970661D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB970621D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png */; };
-		1EC313F01CF607A100AB76CB /* fresh-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EC313EF1CF607A100AB76CB /* fresh-background.jpg */; };
+		1EAA3ADD1DDB591600BCEE41 /* TVCMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA3ADC1DDB591600BCEE41 /* TVCMenuOptions.swift */; };
+		1EAA3ADF1DDB5FBB00BCEE41 /* VCStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA3ADE1DDB5FBB00BCEE41 /* VCStore.swift */; };
+		1EAA3AE11DDB9EF400BCEE41 /* Rating-45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA3AE01DDB9EF400BCEE41 /* Rating-45.pdf */; };
 		1EC421031CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC421011CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift */; };
 		1EC421041CFBF60A00915281 /* CPlanPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC421021CFBF60A00915281 /* CPlanPago.swift */; };
 		1EC421061CFBF88400915281 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC421051CFBF88400915281 /* DataController.swift */; };
+		1ECBCBDD1DD988F400B3F216 /* pig-45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1ECBCBDC1DD988F400B3F216 /* pig-45.pdf */; };
 		1ED3CCE71DC96996002D9FF5 /* VCDetailCuota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3CCE61DC96996002D9FF5 /* VCDetailCuota.swift */; };
 		1ED3CCE91DC971E7002D9FF5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3CCE81DC971E7002D9FF5 /* UIColor.swift */; };
+		1ED7F2C01DDADC02005C7286 /* SingleNSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED7F2BF1DDADC02005C7286 /* SingleNSManagedObjectContext.swift */; };
+		1EF22C0D1DDBC50300FA433F /* VCRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF22C0C1DDBC50300FA433F /* VCRate.swift */; };
+		1EF22C1C1DDBE2D000FA433F /* pig20pt@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C0E1DDBE2D000FA433F /* pig20pt@1x.png */; };
+		1EF22C1D1DDBE2D000FA433F /* pig20pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C0F1DDBE2D000FA433F /* pig20pt@2x.png */; };
+		1EF22C1E1DDBE2D000FA433F /* pig20pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C101DDBE2D000FA433F /* pig20pt@3x.png */; };
+		1EF22C1F1DDBE2D000FA433F /* pig29pt@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C111DDBE2D000FA433F /* pig29pt@1x.png */; };
+		1EF22C201DDBE2D000FA433F /* pig29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C121DDBE2D000FA433F /* pig29pt@2x.png */; };
+		1EF22C211DDBE2D000FA433F /* pig29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C131DDBE2D000FA433F /* pig29pt@3x.png */; };
+		1EF22C221DDBE2D000FA433F /* pig40pt@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C141DDBE2D000FA433F /* pig40pt@1x.png */; };
+		1EF22C231DDBE2D000FA433F /* pig40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C151DDBE2D000FA433F /* pig40pt@2x.png */; };
+		1EF22C241DDBE2D000FA433F /* pig40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C161DDBE2D000FA433F /* pig40pt@3x.png */; };
+		1EF22C251DDBE2D000FA433F /* pig60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C171DDBE2D000FA433F /* pig60pt@2x.png */; };
+		1EF22C261DDBE2D000FA433F /* pig60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C181DDBE2D000FA433F /* pig60pt@3x.png */; };
+		1EF22C271DDBE2D000FA433F /* pig76pt@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C191DDBE2D000FA433F /* pig76pt@1x.png */; };
+		1EF22C281DDBE2D000FA433F /* pig76pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C1A1DDBE2D000FA433F /* pig76pt@2x.png */; };
+		1EF22C291DDBE2D000FA433F /* pig83-5pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF22C1B1DDBE2D000FA433F /* pig83-5pt@2x.png */; };
+		1EFD40FF1DD942D40066E592 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD40FE1DD942D40066E592 /* SWRevealViewController.m */; };
+		1EFD41081DD95D5B0066E592 /* ExternalLink-45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1EFD41051DD95D5B0066E592 /* ExternalLink-45.pdf */; };
+		1EFD41091DD95D5B0066E592 /* Info-45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1EFD41061DD95D5B0066E592 /* Info-45.pdf */; };
+		1EFD410A1DD95D5B0066E592 /* Menu-45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1EFD41071DD95D5B0066E592 /* Menu-45.pdf */; };
 		1EFE24D91CF2811D003D2E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE24D81CF2811D003D2E01 /* AppDelegate.swift */; };
 		1EFE24DB1CF2811D003D2E01 /* VCMiPrestamoMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE24DA1CF2811D003D2E01 /* VCMiPrestamoMain.swift */; };
 		1EFE24DE1CF2811D003D2E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE24DC1CF2811D003D2E01 /* Main.storyboard */; };
@@ -36,23 +54,43 @@
 /* Begin PBXFileReference section */
 		1E14F0C61DC8F18000169C1F /* CGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGlobal.swift; sourceTree = "<group>"; };
 		1E2773CE1CF5516000896F89 /* PlanPago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanPago.swift; sourceTree = "<group>"; };
-		1E2C1C441D07725B007C27B5 /* micalculadoraprestamo80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micalculadoraprestamo80px.png; sourceTree = "<group>"; };
-		1E2C1C451D07725B007C27B5 /* micalculadoraprestamo180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micalculadoraprestamo180px.png; sourceTree = "<group>"; };
-		1E2C1C461D07725B007C27B5 /* micalculadoraprestamo120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micalculadoraprestamo120px.png; sourceTree = "<group>"; };
+		1E5922831DDA3AD90094F6E4 /* Home-50.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Home-50.pdf"; sourceTree = "<group>"; };
+		1E5922851DDA614F0094F6E4 /* DataPlanDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPlanDelegate.swift; sourceTree = "<group>"; };
 		1E85FB051CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiCalculadoraPrestamo.xcdatamodel; sourceTree = "<group>"; };
 		1E9CCA2C1CF4A4D9003ADD86 /* VCMasterCuotas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMasterCuotas.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1EA29A471D119DFB00FCDC49 /* VCWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWebView.swift; sourceTree = "<group>"; };
 		1EA29A4D1D11B94500FCDC49 /* docmicalculadora.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = docmicalculadora.html; sourceTree = "<group>"; };
-		1EB9705F1D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox58.png"; sourceTree = "<group>"; };
-		1EB970601D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox80.png"; sourceTree = "<group>"; };
-		1EB970611D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox120.png"; sourceTree = "<group>"; };
-		1EB970621D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mi Calculadora de Prestamox180.png"; sourceTree = "<group>"; };
-		1EC313EF1CF607A100AB76CB /* fresh-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fresh-background.jpg"; sourceTree = "<group>"; };
+		1EAA3ADC1DDB591600BCEE41 /* TVCMenuOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCMenuOptions.swift; sourceTree = "<group>"; };
+		1EAA3ADE1DDB5FBB00BCEE41 /* VCStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCStore.swift; sourceTree = "<group>"; };
+		1EAA3AE01DDB9EF400BCEE41 /* Rating-45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Rating-45.pdf"; sourceTree = "<group>"; };
 		1EC421011CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CPlanPago+CoreDataProperties.swift"; path = "MiPrestamo/CPlanPago+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1EC421021CFBF60A00915281 /* CPlanPago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CPlanPago.swift; path = MiPrestamo/CPlanPago.swift; sourceTree = "<group>"; };
 		1EC421051CFBF88400915281 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = MiPrestamo/DataController.swift; sourceTree = "<group>"; };
+		1ECBCBDC1DD988F400B3F216 /* pig-45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "pig-45.pdf"; sourceTree = "<group>"; };
 		1ED3CCE61DC96996002D9FF5 /* VCDetailCuota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDetailCuota.swift; sourceTree = "<group>"; };
 		1ED3CCE81DC971E7002D9FF5 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		1ED7F2BF1DDADC02005C7286 /* SingleNSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleNSManagedObjectContext.swift; sourceTree = "<group>"; };
+		1EF22C0C1DDBC50300FA433F /* VCRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRate.swift; sourceTree = "<group>"; };
+		1EF22C0E1DDBE2D000FA433F /* pig20pt@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig20pt@1x.png"; sourceTree = "<group>"; };
+		1EF22C0F1DDBE2D000FA433F /* pig20pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig20pt@2x.png"; sourceTree = "<group>"; };
+		1EF22C101DDBE2D000FA433F /* pig20pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig20pt@3x.png"; sourceTree = "<group>"; };
+		1EF22C111DDBE2D000FA433F /* pig29pt@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig29pt@1x.png"; sourceTree = "<group>"; };
+		1EF22C121DDBE2D000FA433F /* pig29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig29pt@2x.png"; sourceTree = "<group>"; };
+		1EF22C131DDBE2D000FA433F /* pig29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig29pt@3x.png"; sourceTree = "<group>"; };
+		1EF22C141DDBE2D000FA433F /* pig40pt@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig40pt@1x.png"; sourceTree = "<group>"; };
+		1EF22C151DDBE2D000FA433F /* pig40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig40pt@2x.png"; sourceTree = "<group>"; };
+		1EF22C161DDBE2D000FA433F /* pig40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig40pt@3x.png"; sourceTree = "<group>"; };
+		1EF22C171DDBE2D000FA433F /* pig60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig60pt@2x.png"; sourceTree = "<group>"; };
+		1EF22C181DDBE2D000FA433F /* pig60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig60pt@3x.png"; sourceTree = "<group>"; };
+		1EF22C191DDBE2D000FA433F /* pig76pt@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig76pt@1x.png"; sourceTree = "<group>"; };
+		1EF22C1A1DDBE2D000FA433F /* pig76pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig76pt@2x.png"; sourceTree = "<group>"; };
+		1EF22C1B1DDBE2D000FA433F /* pig83-5pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig83-5pt@2x.png"; sourceTree = "<group>"; };
+		1EFD40FC1DD942D30066E592 /* Mi Calculadora de Prestamo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mi Calculadora de Prestamo-Bridging-Header.h"; sourceTree = "<group>"; };
+		1EFD40FD1DD942D40066E592 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1EFD40FE1DD942D40066E592 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1EFD41051DD95D5B0066E592 /* ExternalLink-45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ExternalLink-45.pdf"; sourceTree = "<group>"; };
+		1EFD41061DD95D5B0066E592 /* Info-45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Info-45.pdf"; sourceTree = "<group>"; };
+		1EFD41071DD95D5B0066E592 /* Menu-45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Menu-45.pdf"; sourceTree = "<group>"; };
 		1EFE24D51CF2811D003D2E01 /* Mi Calculadora de Prestamo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mi Calculadora de Prestamo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFE24D81CF2811D003D2E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EFE24DA1CF2811D003D2E01 /* VCMiPrestamoMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMiPrestamoMain.swift; sourceTree = "<group>"; };
@@ -84,14 +122,20 @@
 		1EB970671D6FA8A600ED9B50 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				1EB9705F1D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png */,
-				1EB970601D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png */,
-				1EB970611D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png */,
-				1EB970621D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png */,
-				1E2C1C441D07725B007C27B5 /* micalculadoraprestamo80px.png */,
-				1E2C1C451D07725B007C27B5 /* micalculadoraprestamo180px.png */,
-				1E2C1C461D07725B007C27B5 /* micalculadoraprestamo120px.png */,
-				1EC313EF1CF607A100AB76CB /* fresh-background.jpg */,
+				1EF22C0E1DDBE2D000FA433F /* pig20pt@1x.png */,
+				1EF22C0F1DDBE2D000FA433F /* pig20pt@2x.png */,
+				1EF22C101DDBE2D000FA433F /* pig20pt@3x.png */,
+				1EF22C111DDBE2D000FA433F /* pig29pt@1x.png */,
+				1EF22C121DDBE2D000FA433F /* pig29pt@2x.png */,
+				1EF22C131DDBE2D000FA433F /* pig29pt@3x.png */,
+				1EF22C141DDBE2D000FA433F /* pig40pt@1x.png */,
+				1EF22C151DDBE2D000FA433F /* pig40pt@2x.png */,
+				1EF22C161DDBE2D000FA433F /* pig40pt@3x.png */,
+				1EF22C171DDBE2D000FA433F /* pig60pt@2x.png */,
+				1EF22C181DDBE2D000FA433F /* pig60pt@3x.png */,
+				1EF22C191DDBE2D000FA433F /* pig76pt@1x.png */,
+				1EF22C1A1DDBE2D000FA433F /* pig76pt@2x.png */,
+				1EF22C1B1DDBE2D000FA433F /* pig83-5pt@2x.png */,
 			);
 			name = Images;
 			path = MiPrestamo;
@@ -108,9 +152,34 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		1EFD41001DD942E00066E592 /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+				1EFD40FD1DD942D40066E592 /* SWRevealViewController.h */,
+				1EFD40FE1DD942D40066E592 /* SWRevealViewController.m */,
+				1EFD40FC1DD942D30066E592 /* Mi Calculadora de Prestamo-Bridging-Header.h */,
+			);
+			name = SWReveal;
+			sourceTree = "<group>";
+		};
+		1EFD410B1DD95EFA0066E592 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EAA3AE01DDB9EF400BCEE41 /* Rating-45.pdf */,
+				1E5922831DDA3AD90094F6E4 /* Home-50.pdf */,
+				1ECBCBDC1DD988F400B3F216 /* pig-45.pdf */,
+				1EFD41051DD95D5B0066E592 /* ExternalLink-45.pdf */,
+				1EFD41061DD95D5B0066E592 /* Info-45.pdf */,
+				1EFD41071DD95D5B0066E592 /* Menu-45.pdf */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		1EFE24CC1CF2811D003D2E01 = {
 			isa = PBXGroup;
 			children = (
+				1EFD410B1DD95EFA0066E592 /* resources */,
+				1EFD41001DD942E00066E592 /* SWReveal */,
 				1E32A0A91D9C509900281464 /* Docs */,
 				1EB970671D6FA8A600ED9B50 /* Images */,
 				1EB970681D6FA8C400ED9B50 /* Core Data */,
@@ -133,11 +202,16 @@
 				1EFE24D81CF2811D003D2E01 /* AppDelegate.swift */,
 				1E14F0C61DC8F18000169C1F /* CGlobal.swift */,
 				1ED3CCE81DC971E7002D9FF5 /* UIColor.swift */,
+				1E5922851DDA614F0094F6E4 /* DataPlanDelegate.swift */,
+				1ED7F2BF1DDADC02005C7286 /* SingleNSManagedObjectContext.swift */,
+				1EAA3ADC1DDB591600BCEE41 /* TVCMenuOptions.swift */,
 				1EFE24DA1CF2811D003D2E01 /* VCMiPrestamoMain.swift */,
 				1E2773CE1CF5516000896F89 /* PlanPago.swift */,
 				1E9CCA2C1CF4A4D9003ADD86 /* VCMasterCuotas.swift */,
 				1ED3CCE61DC96996002D9FF5 /* VCDetailCuota.swift */,
 				1EA29A471D119DFB00FCDC49 /* VCWebView.swift */,
+				1EAA3ADE1DDB5FBB00BCEE41 /* VCStore.swift */,
+				1EF22C0C1DDBC50300FA433F /* VCRate.swift */,
 				1EFE24DC1CF2811D003D2E01 /* Main.storyboard */,
 				1EFE24DF1CF2811D003D2E01 /* Assets.xcassets */,
 				1EFE24E11CF2811D003D2E01 /* LaunchScreen.storyboard */,
@@ -180,7 +254,7 @@
 					1EFE24D41CF2811D003D2E01 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = DVSM299CEH;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -212,18 +286,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E2C1C491D07725B007C27B5 /* micalculadoraprestamo120px.png in Resources */,
-				1EC313F01CF607A100AB76CB /* fresh-background.jpg in Resources */,
-				1E2C1C471D07725B007C27B5 /* micalculadoraprestamo80px.png in Resources */,
-				1EB970641D6FA7B300ED9B50 /* Mi Calculadora de Prestamox80.png in Resources */,
+				1EFD41081DD95D5B0066E592 /* ExternalLink-45.pdf in Resources */,
+				1EF22C1D1DDBE2D000FA433F /* pig20pt@2x.png in Resources */,
+				1EFD41091DD95D5B0066E592 /* Info-45.pdf in Resources */,
+				1EF22C241DDBE2D000FA433F /* pig40pt@3x.png in Resources */,
 				1EFE24E31CF2811D003D2E01 /* LaunchScreen.storyboard in Resources */,
-				1EB970631D6FA7B300ED9B50 /* Mi Calculadora de Prestamox58.png in Resources */,
+				1EF22C251DDBE2D000FA433F /* pig60pt@2x.png in Resources */,
+				1EF22C221DDBE2D000FA433F /* pig40pt@1x.png in Resources */,
+				1EF22C1E1DDBE2D000FA433F /* pig20pt@3x.png in Resources */,
+				1EF22C1C1DDBE2D000FA433F /* pig20pt@1x.png in Resources */,
+				1ECBCBDD1DD988F400B3F216 /* pig-45.pdf in Resources */,
 				1EFE24E01CF2811D003D2E01 /* Assets.xcassets in Resources */,
-				1EB970661D6FA7B300ED9B50 /* Mi Calculadora de Prestamox180.png in Resources */,
-				1EB970651D6FA7B300ED9B50 /* Mi Calculadora de Prestamox120.png in Resources */,
-				1E2C1C481D07725B007C27B5 /* micalculadoraprestamo180px.png in Resources */,
+				1EF22C261DDBE2D000FA433F /* pig60pt@3x.png in Resources */,
+				1EAA3AE11DDB9EF400BCEE41 /* Rating-45.pdf in Resources */,
+				1E5922841DDA3AD90094F6E4 /* Home-50.pdf in Resources */,
+				1EF22C281DDBE2D000FA433F /* pig76pt@2x.png in Resources */,
 				1EFE24DE1CF2811D003D2E01 /* Main.storyboard in Resources */,
+				1EF22C211DDBE2D000FA433F /* pig29pt@3x.png in Resources */,
+				1EF22C231DDBE2D000FA433F /* pig40pt@2x.png in Resources */,
+				1EF22C1F1DDBE2D000FA433F /* pig29pt@1x.png in Resources */,
+				1EFD410A1DD95D5B0066E592 /* Menu-45.pdf in Resources */,
+				1EF22C201DDBE2D000FA433F /* pig29pt@2x.png in Resources */,
 				1EA29A4E1D11B94500FCDC49 /* docmicalculadora.html in Resources */,
+				1EF22C291DDBE2D000FA433F /* pig83-5pt@2x.png in Resources */,
+				1EF22C271DDBE2D000FA433F /* pig76pt@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,16 +320,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFD40FF1DD942D40066E592 /* SWRevealViewController.m in Sources */,
 				1E85FB061CF9766100A906EC /* MiCalculadoraPrestamo.xcdatamodeld in Sources */,
 				1ED3CCE91DC971E7002D9FF5 /* UIColor.swift in Sources */,
 				1EC421031CFBF60A00915281 /* CPlanPago+CoreDataProperties.swift in Sources */,
+				1EF22C0D1DDBC50300FA433F /* VCRate.swift in Sources */,
 				1EA29A481D119DFB00FCDC49 /* VCWebView.swift in Sources */,
 				1E14F0C71DC8F18000169C1F /* CGlobal.swift in Sources */,
 				1E9CCA2D1CF4A4D9003ADD86 /* VCMasterCuotas.swift in Sources */,
 				1ED3CCE71DC96996002D9FF5 /* VCDetailCuota.swift in Sources */,
 				1EFE24DB1CF2811D003D2E01 /* VCMiPrestamoMain.swift in Sources */,
+				1EAA3ADF1DDB5FBB00BCEE41 /* VCStore.swift in Sources */,
+				1E5922861DDA614F0094F6E4 /* DataPlanDelegate.swift in Sources */,
 				1EC421041CFBF60A00915281 /* CPlanPago.swift in Sources */,
 				1EC421061CFBF88400915281 /* DataController.swift in Sources */,
+				1ED7F2C01DDADC02005C7286 /* SingleNSManagedObjectContext.swift in Sources */,
+				1EAA3ADD1DDB591600BCEE41 /* TVCMenuOptions.swift in Sources */,
 				1EFE24D91CF2811D003D2E01 /* AppDelegate.swift in Sources */,
 				1E2773CF1CF5516000896F89 /* PlanPago.swift in Sources */,
 			);
@@ -364,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MiPrestamo/Info.plist;
@@ -372,6 +465,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jetainmemsoft.MiCalculadoraPrestamo;
 				PRODUCT_NAME = "Mi Calculadora de Prestamo";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mi Calculadora de Prestamo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MiPrestamo/Info.plist;
@@ -391,6 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jetainmemsoft.MiCalculadoraPrestamo;
 				PRODUCT_NAME = "Mi Calculadora de Prestamo";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mi Calculadora de Prestamo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

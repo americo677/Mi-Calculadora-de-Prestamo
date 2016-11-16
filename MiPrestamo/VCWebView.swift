@@ -12,11 +12,35 @@ class VCWebView: UIViewController, UIWebViewDelegate {
 
     @IBOutlet var wvWebView: UIWebView!
     
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    
+    // MARK: - Carga inicial de vista
+    
+    func loadPreferences() {
+        
+        // Cambia el color de la navigation bar
+        self.navigationController?.navigationBar.barTintColor = UIColor.customLightGreen()
+        
+        // Cambia el color del texto de la navigation bar
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.customLightYellow(),  NSFontAttributeName: UIFont(name: "Futura", size: 16)!]
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.customLightYellow()
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //let testHTML = NSBundle.mainBundle().pathForResource("docmicalculadora", ofType: "html")
+        
+        if self.revealViewController() != nil {
+            btnMenu.target = self.revealViewController()
+            btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+
+        loadPreferences()
         
         let testHTML = Bundle.main.url(forResource: "docmicalculadora", withExtension: "html")
         //var contents = NSString(contentsOfFile: testHTML!, encoding: NSUTF8StringEncoding, error: nil)
